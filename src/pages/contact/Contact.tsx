@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
           <form action="">
             <label htmlFor="name">
               Name
-              <input type="text" placeholder="Your name" />
+              <input required type="text" placeholder="Your name" />
             </label>
             <label htmlFor="email">
               E-mail
@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
               <textarea name="message" placeholder="Your message"></textarea>
             </label>
             <div className="send">
-              <button>Send</button>
+              <button>Send request</button>
               <p>By sending request you agree to out Pivacy&Policy</p>
             </div>
           </form>

@@ -9,8 +9,14 @@
   padding: 0 20px;
   max-width: 1340px;
 }
-input {
+input,
+textarea {
   outline: none;
+}
+textarea {
+  resize: none;
+  height: 132px;
+  overflow: auto;
 }
 ul {
   list-style-type: none;
