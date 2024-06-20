@@ -6,6 +6,7 @@ import mail from "../../assets/email.svg";
 let initialState = {
   name: "",
   email: "",
+  message: "",
 };
 const Contact: React.FC = () => {
   let [data, setData] = useState(initialState);
@@ -16,6 +17,7 @@ const Contact: React.FC = () => {
   let handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(data);
+    setData(initialState);
   };
 
   return (
@@ -48,6 +50,7 @@ const Contact: React.FC = () => {
                 onChange={handleChange}
                 name="name"
                 required
+                value={data.name}
                 type="text"
                 placeholder="Your name"
               />
@@ -55,16 +58,20 @@ const Contact: React.FC = () => {
             <label htmlFor="email">
               E-mail
               <input
+                required
                 onChange={handleChange}
                 name="email"
+                value={data.email}
                 type="text"
                 placeholder="Your email"
               />
             </label>
             <label htmlFor="message">
               <textarea
+                required
                 onChange={handleChange}
                 name="message"
+                value={data.message}
                 placeholder="Your message"
               ></textarea>
             </label>
