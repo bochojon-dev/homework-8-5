@@ -1,0 +1,46 @@
+.header_contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 0;
+  z-index: 101;
+}
+.header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0px 4px 12px 0px #cfcfcf40;
+}
+.header_icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.header_icons input {
+  padding: 12px 0 12px 56px;
+  border-radius: 36px;
+  border: 1px solid #efefef;
+  width: 100%;
+}
+.header_icons form {
+  position: relative;
+  width: 285px;
+}
+.header_icons form img {
+  position: absolute;
+  left: 20px;
+  top: 9px;
+}
+
+.links li {
+  padding: 0 16px;
+  border-right: 1px solid #efefef;
+  color: #70737c;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}

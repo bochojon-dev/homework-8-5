@@ -1,0 +1,31 @@
+.footer_top,
+.footer_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+.footer_top {
+  border-bottom: 1px solid #359740;
+  padding-bottom: 36px;
+}
+.footer_contents li {
+  padding: 0 16px;
+  border-right: 1px solid #4fa083;
+  transition: 0.1s ease;
+  font-size: 14px;
+  font-weight: 4=500;
+  line-height: 24.95px;
+  color: #70737c;
+}
+.footer_contents li:hover {
+  color: #359740;
+}
+.footer_contents li:last-child {
+  border: none !important;
+}
+.footer_icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
