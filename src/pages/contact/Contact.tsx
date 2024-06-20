@@ -1,9 +1,23 @@
-import React from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import "../contact/Contact.css";
 import phone from "../../assets/phone.svg";
 import mail from "../../assets/email.svg";
 
+let initialState = {
+  name: "",
+  email: "",
+};
 const Contact: React.FC = () => {
+  let [data, setData] = useState(initialState);
+  let handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    let { value, name } = e.target;
+    setData((prev) => ({ ...prev, [name]: value }));
+  };
+  let handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(data);
+  };
+
   return (
     <div className="contact">
       <div className="container">
@@ -27,17 +41,32 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </div>
-          <form action="">
+          <form onSubmit={handleSubmit} action="">
             <label htmlFor="name">
               Name
-              <input required type="text" placeholder="Your name" />
+              <input
+                onChange={handleChange}
+                name="name"
+                required
+                type="text"
+                placeholder="Your name"
+              />
             </label>
             <label htmlFor="email">
               E-mail
-              <input type="text" placeholder="Your email" />
+              <input
+                onChange={handleChange}
+                name="email"
+                type="text"
+                placeholder="Your email"
+              />
             </label>
             <label htmlFor="message">
-              <textarea name="message" placeholder="Your message"></textarea>
+              <textarea
+                onChange={handleChange}
+                name="message"
+                placeholder="Your message"
+              ></textarea>
             </label>
             <div className="send">
               <button>Send request</button>
